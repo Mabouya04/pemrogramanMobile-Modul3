@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/drawable/ic_currency_exchange.xml" value="0.16" />
+        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19" />
+        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.19" />
+        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/drawable/ic_swap.xml" value="0.19" />
+        <entry key="..\:/lol/1-Semester 4/keperluan/projek/konversiuang/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>

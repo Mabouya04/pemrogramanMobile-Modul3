@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Konversi Mata Uang</string>
-    <string name="choose_currency">Pilih Mata Uang?</string>
+    <string name="choose_currency">Pilih Mata Uang :</string>
     <string name="currency_value">Nilai Mata Uang</string>
     <string name="convert">Konversi</string>
-    <string name="rupiah_value">Nilai Rupiah: %s</string>
+    <string name="rupiah_value">Konversi Rupiah : %s</string>
     <string name="euro">Euro</string>
     <string name="us_dollar">US Dollar</string>
     <string name="japanese_yen">Japanese Yen</string>

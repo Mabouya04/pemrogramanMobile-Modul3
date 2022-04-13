@@ -13,39 +13,40 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var idBind: ActivityMainBinding
+    private lateinit var binding
+    : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        idBind = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(idBind.root)
-        idBind.nilaiMataUang.setOnKeyListener{view, keyCode, _ -> handleKeyEvent(view, keyCode)}
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.nilaiMataUang.setOnKeyListener{ view, keyCode, _ -> handleKeyEvent(view, keyCode)}
 
-        idBind.textRupiah.isVisible = false
-        idBind.convertButton.setOnClickListener{konversi()}
+        binding.textRupiah.isVisible = false
+        binding.convertButton.setOnClickListener{konversi()}
     }
 
     private fun konversi() {
-        val stringInTextField = idBind.nilaiMataUang.text.toString()
+        val stringInTextField = binding.nilaiMataUang.text.toString()
         val nilaiUang = stringInTextField.toDoubleOrNull()
         if (nilaiUang == null) {
-            idBind.textRupiah.text =" "
+            binding.textRupiah.text =" "
             return
         }
 
-        val convert = when (idBind.currencyGroup.checkedRadioButtonId){
-            R.id.euro_button -> 15886.76
-            R.id.usd_button -> 14376.05
-            R.id.yen_button -> 117.34
-            else -> 3832.17
+        val convert = when (binding.currencyGroup.checkedRadioButtonId){
+            R.id.euro_button -> 15550.75
+            R.id.usd_button -> 14366.00
+            R.id.yen_button -> 113.84
+            else -> 3831.06
         }
 
         val totalRupiah = nilaiUang * convert
         val indonesianLocale = Locale("in", "ID")
         val rupiahFormat = NumberFormat.getCurrencyInstance(indonesianLocale).format(totalRupiah)
-        idBind.textRupiah.text = getString(R.string.rupiah_value, rupiahFormat)
-        idBind.textRupiah.isVisible = true
+        binding.textRupiah.text = getString(R.string.rupiah_value, rupiahFormat)
+        binding.textRupiah.isVisible = true
 
     }
 
